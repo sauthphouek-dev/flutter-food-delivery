@@ -9,28 +9,112 @@
 
 import 'package:flutter/widgets.dart';
 
-class $AssetsImageGen {
-  const $AssetsImageGen();
+class $AssetsIconsGen {
+  const $AssetsIconsGen();
 
-  /// File path: assets/image/background_dark.png
-  AssetGenImage get backgroundDark =>
-      const AssetGenImage('assets/image/background_dark.png');
+  /// File path: assets/icons/facebook.png
+  AssetGenImage get facebook =>
+      const AssetGenImage('assets/icons/facebook.png');
 
-  /// File path: assets/image/background_light.png
-  AssetGenImage get backgroundLight =>
-      const AssetGenImage('assets/image/background_light.png');
+  /// File path: assets/icons/google.png
+  AssetGenImage get google => const AssetGenImage('assets/icons/google.png');
 
-  /// File path: assets/image/logo.png
-  AssetGenImage get logo => const AssetGenImage('assets/image/logo.png');
+  /// File path: assets/icons/payoneer.png
+  AssetGenImage get payoneer =>
+      const AssetGenImage('assets/icons/payoneer.png');
+
+  /// File path: assets/icons/paypal.png
+  AssetGenImage get paypal => const AssetGenImage('assets/icons/paypal.png');
+
+  /// File path: assets/icons/visa.png
+  AssetGenImage get visa => const AssetGenImage('assets/icons/visa.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [backgroundDark, backgroundLight, logo];
+  List<AssetGenImage> get values => [facebook, google, payoneer, paypal, visa];
+}
+
+class $AssetsImagesGen {
+  const $AssetsImagesGen();
+
+  /// File path: assets/images/background_dark.png
+  AssetGenImage get backgroundDark =>
+      const AssetGenImage('assets/images/background_dark.png');
+
+  /// File path: assets/images/background_light.png
+  AssetGenImage get backgroundLight =>
+      const AssetGenImage('assets/images/background_light.png');
+
+  /// File path: assets/images/circlo.png
+  AssetGenImage get circlo => const AssetGenImage('assets/images/circlo.png');
+
+  /// File path: assets/images/cloudy_food.png
+  AssetGenImage get cloudyFood =>
+      const AssetGenImage('assets/images/cloudy_food.png');
+
+  /// File path: assets/images/draft_humbergure.png
+  AssetGenImage get draftHumbergure =>
+      const AssetGenImage('assets/images/draft_humbergure.png');
+
+  /// File path: assets/images/haty.png
+  AssetGenImage get haty => const AssetGenImage('assets/images/haty.png');
+
+  /// File path: assets/images/healthy.png
+  AssetGenImage get healthy => const AssetGenImage('assets/images/healthy.png');
+
+  /// File path: assets/images/logo.png
+  AssetGenImage get logo => const AssetGenImage('assets/images/logo.png');
+
+  /// File path: assets/images/lovy_food.png
+  AssetGenImage get lovyFood =>
+      const AssetGenImage('assets/images/lovy_food.png');
+
+  /// File path: assets/images/maww.jpg
+  AssetGenImage get maww => const AssetGenImage('assets/images/maww.jpg');
+
+  /// File path: assets/images/recto.png
+  AssetGenImage get recto => const AssetGenImage('assets/images/recto.png');
+
+  /// File path: assets/images/splash_bg.png
+  AssetGenImage get splashBg =>
+      const AssetGenImage('assets/images/splash_bg.png');
+
+  /// File path: assets/images/success.png
+  AssetGenImage get success => const AssetGenImage('assets/images/success.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [
+        backgroundDark,
+        backgroundLight,
+        circlo,
+        cloudyFood,
+        draftHumbergure,
+        haty,
+        healthy,
+        logo,
+        lovyFood,
+        maww,
+        recto,
+        splashBg,
+        success
+      ];
+}
+
+class $AssetsSvgGen {
+  const $AssetsSvgGen();
+
+  /// File path: assets/svg/menu.svg
+  String get menu => 'assets/svg/menu.svg';
+
+  /// List of all assets
+  List<String> get values => [menu];
 }
 
 class Assets {
   Assets._();
 
-  static const $AssetsImageGen image = $AssetsImageGen();
+  static const $AssetsIconsGen icons = $AssetsIconsGen();
+  static const $AssetsImagesGen images = $AssetsImagesGen();
+  static const $AssetsSvgGen svg = $AssetsSvgGen();
 }
 
 class AssetGenImage {

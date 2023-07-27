@@ -1,10 +1,13 @@
-import 'package:flutter/widgets.dart';
+import 'package:delivery_app/gen/assets.gen.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../splash_screen.dart';
 
 class SplashScreenPage extends StatelessWidget {
   const SplashScreenPage({super.key});
+
+  static const String routePath = '/';
 
   @override
   Widget build(BuildContext context) {
@@ -20,11 +23,24 @@ class SplashScreenView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<SplashScreenCubit, SplashScreenState>(
-      builder: (context, state) {
-        // TODO: return correct widget based on the state.
-        return const SizedBox();
-      },
+    return Scaffold(
+      body: Stack(
+        children: [
+          Assets.images.backgroundLight.image(
+            fit: BoxFit.cover,
+            width: double.infinity,
+            height: double.infinity,
+            colorBlendMode: BlendMode.softLight,
+          ),
+          Center(
+            child: Assets.images.logo.image(
+              width: 260,
+              height: 260,
+              fit: BoxFit.fill,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
