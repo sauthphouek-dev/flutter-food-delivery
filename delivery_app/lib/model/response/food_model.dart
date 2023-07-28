@@ -24,7 +24,7 @@ class FoodModel {
       price: '10',
       // random image from internet
       image: 'https://picsum.photos/250?image=9',
-      status: 'New',
+      status: 'Best',
     ),
     FoodModel(
       id: '2',
@@ -33,7 +33,7 @@ class FoodModel {
       price: '14',
       // random image from internet
       image: 'https://picsum.photos/250?image=10',
-      status: 'New',
+      status: 'Sale',
     ),
     FoodModel(
       id: '3',

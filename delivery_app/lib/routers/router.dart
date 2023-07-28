@@ -1,3 +1,4 @@
+import 'package:delivery_app/address/address.dart';
 import 'package:delivery_app/bio/bio.dart';
 import 'package:delivery_app/congrats/congrats.dart';
 import 'package:delivery_app/forgot_password/forgot_password.dart';
@@ -84,6 +85,10 @@ class MyRouter {
       GoRoute(
         path: StartCalling.routePath,
         builder: (context, state) => const StartCalling(),
+      ),
+      GoRoute(
+        path: AddressPage.routePath,
+        builder: (context, state) => const AddressPage(),
       ),
     ],
   );

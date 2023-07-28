@@ -28,7 +28,7 @@ class CardItem extends StatelessWidget {
         boxShadow: [
           // shadow bottom and right with color grey 200 and blur radius 30
           BoxShadow(
-            color: AppColors.grey100,
+            color: AppColors.grey200,
             blurRadius: 80,
             offset: Offset(10, 10),
           ),

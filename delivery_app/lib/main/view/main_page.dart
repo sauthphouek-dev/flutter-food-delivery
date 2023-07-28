@@ -45,12 +45,14 @@ class _MainViewState extends State<MainView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
+      backgroundColor: AppColors.grey50,
       body: PageTransitionSwitcher(
         duration: const Duration(milliseconds: 360),
-        transitionBuilder: (Widget child,
-            Animation<double> animation,
-            Animation<double> secondaryAnimation,) {
+        transitionBuilder: (
+          Widget child,
+          Animation<double> animation,
+          Animation<double> secondaryAnimation,
+        ) {
           return SharedAxisTransition(
             animation: animation,
             secondaryAnimation: secondaryAnimation,
@@ -60,13 +62,19 @@ class _MainViewState extends State<MainView> {
         },
         child: _pages[_currentIndex],
       ),
-      bottomNavigationBar: SafeArea(
+      bottomNavigationBar: BottomAppBar(
+        elevation: 0,
+        notchMargin: 0,
+        surfaceTintColor: Colors.transparent,
+        clipBehavior: Clip.antiAlias,
         child: Container(
           padding: const EdgeInsets.symmetric(
             vertical: AppSpacing.md,
           ),
-          margin: const EdgeInsets.symmetric(
-            horizontal: AppSpacing.md,
+          margin: const EdgeInsets.only(
+            left: AppSpacing.md,
+            right: AppSpacing.md,
+            bottom: AppSpacing.md,
           ),
           decoration: BoxDecoration(
             color: Colors.white,

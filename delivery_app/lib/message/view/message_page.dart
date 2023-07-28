@@ -165,10 +165,10 @@ class MessageView extends StatelessWidget {
                                   index.toString(),
                                   style: Theme.of(context)
                                       .textTheme
-                                      .bodyMedium!
+                                      .bodySmall!
                                       .copyWith(
                                         color: AppColors.white,
-                                        fontWeight: AppFontWeight.bold,
+                                        fontWeight: AppFontWeight.semiBold,
                                       ),
                                 ),
                               ),

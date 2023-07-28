@@ -141,40 +141,50 @@ class _StartCallingState extends State<StartCalling> {
 
                     // two buttons with iconly icon phone and video call with background color primary and white
                     SafeArea(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          // button phone call
-                          GestureDetector(
-                            onTap: () {
-                              Navigator.of(context).pop();
-                            },
-                            child: Container(
+                      child: Container(
+                        alignment: Alignment.center,
+                        margin: EdgeInsets.symmetric(
+                          horizontal: AppSpacing.md,
+                          vertical: AppSpacing.md,
+                        ),
+                        child: Row(
+                          // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            // button phone call
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.of(context).pop();
+                              },
+                              child: Container(
+                                padding: EdgeInsets.all(16),
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: AppColors.primary08,
+                                ),
+                                child: Icon(
+                                  Icons.cancel,
+                                  color: AppColors.primary,
+                                ),
+                              ),
+                            ),
+                            const SizedBox(width: AppSpacing.xxlg),
+                            // button video call
+                            Container(
                               padding: EdgeInsets.all(16),
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
-                                color: AppColors.primary08,
+                                color: AppColors.success20,
                               ),
                               child: Icon(
-                                Icons.cancel,
-                                color: AppColors.primary,
+                                Icons.call,
+                                color: AppColors.success90,
                               ),
                             ),
-                          ),
-                          // button video call
-                          Container(
-                            padding: EdgeInsets.all(16),
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: AppColors.success20,
-                            ),
-                            child: Icon(
-                              Icons.call,
-                              color: AppColors.success90,
-                            ),
-                          ),
-                          // animated container with width 80 and height 80
-                        ],
+                            // animated container with width 80 and height 80
+                          ],
+                        ),
                       ),
                     ),
                   ],

@@ -13,6 +13,7 @@ class PopularRestaurant extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.grey100,
       appBar: CustomAppBar(
         title: 'Popular Restaurant',
       ),
