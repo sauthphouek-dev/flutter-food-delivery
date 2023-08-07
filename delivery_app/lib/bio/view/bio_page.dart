@@ -4,11 +4,10 @@ import 'package:delivery_app/shared/widgets/elevated_button_action.dart';
 import 'package:delivery_app/shared/widgets/text_form_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
+
+// import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:go_router/go_router.dart';
-import 'package:intl/intl.dart';
-
 import '../../shared/widgets/custom_app_bar.dart';
 import '../bio.dart';
 
@@ -125,46 +124,30 @@ class _BioViewState extends State<BioView> {
   }
 
   void _showDatePicker() {
-    DatePicker.showDatePicker(
-      context,
-      showTitleActions: true,
-      minTime: DateTime(1697),
-      maxTime: DateTime.now(),
-      theme: DatePickerTheme(
-        headerColor: AppColors.primary80,
-        backgroundColor: AppColors.white,
-        itemStyle: Theme.of(context).textTheme.bodyMedium!.copyWith(
-              color: AppColors.grey700,
-              fontWeight: AppFontWeight.semiBold,
-            ),
-        doneStyle: Theme.of(context).textTheme.bodyMedium!.copyWith(
-              color: AppColors.white,
-              fontWeight: AppFontWeight.semiBold,
-            ),
-        cancelStyle: Theme.of(context).textTheme.bodyMedium!.copyWith(
-              color: AppColors.grey400,
-              fontWeight: AppFontWeight.semiBold,
-            ),
-      ),
-      onChanged: (date) {
-        print('Selected date: $date');
-      },
-      onConfirm: (date) {
-        setState(() {
-          final formattedDate = date.toString().split(' ')[0].split('-');
-          // format to August 25, 1995
-          _dateOfBirth.text = DateFormat('MMMM dd, yyyy').format(
-            DateTime(
-              int.parse(formattedDate[0]),
-              int.parse(formattedDate[1]),
-              int.parse(formattedDate[2]),
-            ),
-          );
-        });
-      },
-      currentTime: DateTime.now(),
-      locale: LocaleType.en,
-    );
+    // DatePicker.showDatePicker(
+    //   context,
+    //   showTitleActions: true,
+    //   minTime: DateTime(1697),
+    //   maxTime: DateTime.now(),
+    //   onChanged: (date) {
+    //     print('Selected date: $date');
+    //   },
+    //   onConfirm: (date) {
+    //     setState(() {
+    //       final formattedDate = date.toString().split(' ')[0].split('-');
+    //       // format to August 25, 1995
+    //       _dateOfBirth.text = DateFormat('MMMM dd, yyyy').format(
+    //         DateTime(
+    //           int.parse(formattedDate[0]),
+    //           int.parse(formattedDate[1]),
+    //           int.parse(formattedDate[2]),
+    //         ),
+    //       );
+    //     });
+    //   },
+    //   currentTime: DateTime.now(),
+    //   locale: LocaleType.en,
+    // );
   }
 
   @override

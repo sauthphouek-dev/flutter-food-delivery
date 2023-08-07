@@ -16,6 +16,7 @@ import 'package:delivery_app/verify_otp/verify_otp.dart';
 import 'package:go_router/go_router.dart';
 
 import '../main/view/view.dart';
+import '../notification/view/notification_page.dart';
 
 class MyRouter {
   MyRouter._();
@@ -89,6 +90,10 @@ class MyRouter {
       GoRoute(
         path: AddressPage.routePath,
         builder: (context, state) => const AddressPage(),
+      ),
+      GoRoute(
+        path: NotificationPage.routePath,
+        builder: (context, state) => const NotificationPage(),
       ),
     ],
   );

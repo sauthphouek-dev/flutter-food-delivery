@@ -2,6 +2,7 @@ import 'package:delivery_app/home/widgets/popular_menu.dart';
 import 'package:delivery_app/home/widgets/popular_restaurant.dart';
 import 'package:delivery_app/model/model.dart';
 import 'package:delivery_app/model/response/food_model.dart';
+import 'package:delivery_app/notification/notification.dart';
 import 'package:delivery_app/shared/app_ui.dart';
 import 'package:delivery_app/shared/widgets/card_item.dart';
 import 'package:delivery_app/shared/widgets/card_list_tile.dart';
@@ -71,7 +72,9 @@ class HomeView extends StatelessWidget {
               bottom: AppSpacing.md,
             ),
             child: IconButton(
-              onPressed: () {},
+              onPressed: () {
+                GoRouter.of(context).push(NotificationPage.routePath);
+              },
               icon: Icon(
                 IconlyBold.notification,
                 color: AppColors.primary,
